@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương trình đào tạo</title>
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .nen {
+            background-color: rgb(209, 194, 167);
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+            padding: 20px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhwoWqQ2cA94AqGdl3sumVoK3EM6eByvvyyw&s');
+            /* Hình trống đồng */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-blend-mode: color-burn;
+            position: relative;
+            height: 150px;
+        }
+
+        .mau {
+            position: absolute;
+            /* Đặt vị trí tương đối so với banner */
+            bottom: 0px;
+            /* Cách đáy banner */
+            left: 20px;
+            /* Cách trái banner 20px */
+        }
+
+        .mau h1 {
+            font-size: 36px;
+            margin: 0;
+            color: #0000BB;
+            background-color: rgba(255, 255, 255, 0.527);
+            /* Nền trắng mờ */
+            display: inline-block;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        .mau .ovuong {
+            width: 40px;
+            height: 3px;
+            background-color: red;
+            /* Màu đỏ */
+            margin-bottom: -20px;
+            margin-left: 30px;
+            position: relative;
+        }
+
+        .ô {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            /* Màu đỏ */
+            position: absolute;
+            top: -50px;
+            right: -10px;
+        }
+
+        .bc {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cot {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cot img {
+            width: 100%;
+            height: auto;
+        }
+
+        .cot h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 0 10px;
+        }
+
+        .cot p {
+            font-size: 14px;
+            color: #555;
+            padding: 0 10px 20px;
+        }
+
+        /* Đảm bảo bố cục đẹp trên màn hình nhỏ */
+        @media (max-width: 768px) {
+            .bc {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer {
+            background-color: #f9f9f9;
+            padding: 20px 50px;
+            text-align: center;
+            border-top: 2px solid #000080;
+            /* Đường viền màu xanh navy */
+        }
+
+        .td {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            /* Khoảng cách giữa phần "Liên hệ" và các mạng xã hội */
+            flex-wrap: wrap;
+            /* Để đảm bảo bố cục không bị vỡ trên màn hình nhỏ */
+        }
+
+        .bieutuong {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            /* Khoảng cách giữa các biểu tượng */
+        }
+
+        .bieutuong a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #0066ff;
+            display: flex;
+            /* Để căn giữa biểu tượng và chữ */
+            align-items: center;
+            gap: 20px;
+            /* Khoảng cách giữa biểu tượng và chữ */
+        }
+
+        .bieutuong img {
+            width: 25px;
+            height: 25px;
+            object-fit: cover;
+        }
+
+        .bieutuong a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class id="Taskbar"></div>
+    <script>
+        fetch('Taskbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('Taskbar').innerHTML = data;
+            });
+    </script>
+
+    <section class="nen">
+        <div class="mau">
+            <div class="ovuong"></div>
+            <h1>Chương trình đào tạo </h1>
+            <div class="ô"></div>
+        </div>
+    </section>
+
+    <div class="bc">
+        <!-- Cot 1 -->
+        <div class="cot">
+            <img src="tkb1.png" alt="Thời khóa biểu">
+            <h3>Thời khóa biểu thực hiện từ 07/10/2024</h3>
+            <p>TKB Thực hiện từ 07/10/2024</p>
+        </div>
+
+        <!-- cot 2  -->
+        <div class="cot">
+            <img src="tkb1.png" alt="Thời khóa biểu">
+            <h3>Thời khóa biểu thực hiện từ 30/09/2024</h3>
+            <p>TKB Thực hiện từ 30/09/2024</p>
+        </div>
+        <div class="cot">
+            <img src="tkb1.png" alt="Thời khóa biểu">
+            <h3>Thời khóa biểu thực hiện từ 30/09/2024</h3>
+            <p>TKB Thực hiện từ 30/09/2024</p>
+        </div>
+
+        <!-- cot 3-->
+        <div class="cot">
+            <img src="tkb1.png" alt="Thời khóa biểu">
+            <h3>Thời khóa biểu thực hiện từ 08/04/2024</h3>
+            <p>TKB Thực hiện từ 08/04/2024</p>
+        </div>
+        <!-- cot 4  -->
+        <div class="cot">
+            <img src="tkb1.png" alt="Thời khóa biểu">
+            <h3>Thời khóa biểu thực hiện từ 30/09/2024</h3>
+            <p>TKB Thực hiện từ 01/04/2024</p>
+        </div>
+        <!-- cot 5  -->
+        <div class="cot">
+            <img src="tkb1.png" alt="Thời khóa biểu">
+            <h3>Thời khóa biểu thực hiện từ 25/03/2024</h3>
+            <p>TKB Thực hiện từ 30/09/2024</p>
+        </div>
+
+        <!-- cot 6  -->
+        <div class="cot">
+            <img src="tkb1.png" alt="Thời khóa biểu">
+            <h3>Thời khóa biểu thực hiện từ 11/03/2024</h3>
+            <p>SANG GVTKB_11_03_2024(TUẦN 27)</p>
+        </div>
+
+        <!-- cot 7 -->
+        <div class="cot">
+            <img src="tkb1.png" alt="Thời khóa biểu">
+            <h3>Thời khóa biểu thực hiện từ 05/02/2024</h3>
+            <p>SANG GVTKB_05_02_2024(TUẦN 23)</p>
+        </div>
+
+        <!-- cot 8 -->
+        <div class="cot">
+            <img src="tkb1.png" alt="Thời khóa biểu">
+            <h3>Thời khóa biểu thực hiện từ 08/01/2024</h3>
+            <p>SANG GVTKB_08_01_2024(TUẦN 19)</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="td">
+            <h3>Liên hệ với Trường THPT Phương Sơn</h3>
+            <div class="bieutuong">
+                <a href="#"><img src="face.jpg" alt="Facebook"> Facebook</a>
+                <a href="#"><img src="OIP.jpg" alt="Gmail"> Gmail</a>
+                <a href="#"><img src="tw.jpg" alt="Twitter"> Twitter</a>
+                <a href="#"><img src="in.jpg" alt="LinkedIn"> LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

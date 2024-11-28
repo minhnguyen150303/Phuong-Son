@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trường THPT Phương Sơn</title>
+    <style>
+        /* * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+
+    } */
+
+        .phandau {
+            background-color: #e6e6e6;
+            padding: 5px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .phandau .modau {
+            color: #333;
+            font-size: 16px;
+        }
+
+        .phandau .nav {
+            display: flex;
+        }
+
+        .phandau .nav a {
+            color: #333;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .phandau .nav a:hover {
+            color: #d9534f;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .logo-c {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-c img {
+            height: 80px;
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .info h1 {
+            margin: 0;
+            color: #d9534f;
+            font-size: 25px;
+        }
+
+        .info p {
+            margin: 0;
+            color: #3572a8;
+            font-size: 20px;
+        }
+
+        .tra {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .tra input[type="text"] {
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .tra button {
+            background-color: #d9534f;
+            color: white;
+            padding: 6px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .trang {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background-color: #2871bb;
+            color: white;
+
+        }
+
+        .trang a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 0.95em;
+            white-space: nowrap;
+        }
+
+        .trang a:hover {
+            border-bottom: 2px solid #ff0000;
+        }
+
+        .cap1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .cap2 {
+            display: none;
+            position: absolute;
+            background-color: #2871bb;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .cap2 a {
+            color: white;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .cap2 a:hover {
+            background-color: #ff0000;
+        }
+
+        .cap1:hover>.cap2 {
+            display: block;
+        }
+
+        .cap2 .cap1:hover .cap2 {
+            left: 100%;
+            top: 0;
+        }
+
+        /* Khung chứa slider */
+        .khung {
+            position: relative;
+            max-width: 1000px;
+            padding: 1px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        /* Hiển thị hình ảnh liên tiếp theo hàng ngang */
+        .anh {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Định dạng kích thước hình ảnh trong slider */
+        .anh img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Khu vực nút điều hướng trái/phải */
+        .nut {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        /* Định dạng nút điều hướng */
+        .nut a {
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 24px;
+            transition: background-color 0.3s;
+        }
+
+        /* Hiệu ứng hover cho nút điều hướng */
+        .nut a:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .noidung {
+            display: flex;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .tintuc,
+        .sidebar {
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tintuc {
+            width: 50%;
+            margin-right: 20px;
+        }
+
+        .sidebar {
+            width: 30%;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2a5b39;
+            margin-bottom: 20px;
+        }
+
+        .e {
+            margin-bottom: 20px;
+        }
+
+        .e img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .phuongson {
+            width: 300px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .ps {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .ps img {
+            width: 80px;
+            height: 60px;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .pson {
+            flex: 1;
+        }
+
+        .phs {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin: 0 0 5px;
+        }
+
+        .phso {
+            font-size: 12px;
+            color: #666;
+            display: flex;
+            align-items: center;
+        }
+
+        .phso .date {
+            display: flex;
+            align-items: center;
+        }
+
+        .phso .date::before {
+            content: "\1F4C5";
+            margin-right: 5px;
+        }
+
+        .phso .views::before {
+            content: "\1F441";
+            margin-right: 5px;
+            margin-left: 10px;
+        }
+
+        /* Thông báo */
+        .thongbao {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .thongbao h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .thongbao-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .thongbao-item .date {
+            font-size: 20px;
+            color: #d9534f;
+            text-align: center;
+            min-width: 50px;
+        }
+
+        .thongbao-item .date span {
+            display: block;
+            font-weight: bold;
+        }
+
+        .thongbao-item .info {
+            flex: 1;
+        }
+
+        .thongbao-item .info a {
+            font-size: 16px;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .thongbao-item .info a:hover {
+            color: #d9534f;
+        }
+
+        .thongbao-item .meta {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .dangky {
+            width: 250px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .dangky .header {
+            background-color: #1e73be;
+            color: white;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px;
+            font-size: 16px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            position: relative;
+        }
+
+        .dangky.header::before {
+            content: "►";
+            position: absolute;
+            left: 8px;
+            color: red;
+            font-size: 12px;
+        }
+
+        .dangky .nhom {
+            display: flex;
+            align-items: center;
+            padding: 8px 10px;
+        }
+
+        .dangky .nhom label {
+            width: 70px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .dangky .nhom input,
+        .dangky .nhom select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .dangky .submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .dangky .submit:hover {
+            background-color: #c9302c;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="phandau">
+        <div class="modau">Chào mừng bạn đến với website Trường THPT Phương Sơn</div>
+        <div class="nav">
+            <a href="#">XEM CÔNG VĂN</a>
+            <a href="#">TRA CỨU ĐIỂM</a>
+            <a href="#">HỌC TRỰC TUYẾN</a>
+        </div>
+    </div>
+
+    <div class id="Taskbar">
+        <%- include('./taskbar') %>
+    </div>
+
+    <div class="khung">
+        <!-- Phần chứa các hình ảnh -->
+        <div class="anh">
+            <img src="/image/a1.png" alt="" />
+            <img src="/image/a2.jpg" alt="">
+            <img src="/image/a3.jpg" alt="">
+        </div>
+
+        <!-- Các nút điều hướng -->
+        <div class="nut">
+            <a href="#" id="prev">&#10094;</a> <!-- Nút "quay lại" với mũi tên trái -->
+            <a href="#" id="next">&#10095;</a> <!-- Nút "tiếp theo" với mũi tên phải -->
+        </div>
+    </div>
+
+    <div class="noidung">
+        <div class="tintuc">
+            <div class="title">Tin Tức </div>
+            <div class="e">
+                <img src="/image/caulong.jpg" alt="Event Image">
+                <h3>Đoàn viên công đoàn Trường THPT Phương Sơn tích cực tham gia Giải Cầu lông truyền thống ngành Giáo
+                    dục</h3>
+                <p>Thực hiện Kế hoạch số 10/KH-CĐGD ngày 17/10/2024 của Công đoàn Giáo dục tỉnh về việc tổ chức Giải Cầu
+                    lông
+                    truyền thống ngành Giáo dục tỉnh Bắc Giang chào mừng Ngày Nhà giáo Việt Nam (20/11), sáng 10/11/2024
+                    tại
+                    trường THPT Yên Dũng số 1 đã diễn ra các trận đấu trong khuôn khổ cụm Yên Dũng – Lục Nam, với sự
+                    tham gia của
+                    8 trường.<br>
+
+                    Trường THPT Phương Sơn tham gia 01 nội dung đôi nữ, lứa tuổi từ 31 đến 40 với sự góp sức của 2 vận
+                    động viên
+                    Dương Thị Minh Khang và Nguyễn Thị Lý. Sau khi vượt qua 3 trận đấu trước các đối thủ đến từ các đơn
+                    vị Trường
+                    THPT Yên Dũng 1, THPT Yên Dũng 3, THPT Thanh Lâm, đôi nữ nhà trường đã xuất sắc giành được giải Nhì.
+                </p>
+            </div>
+            <!-- cột 2 -->
+        </div>
+        <div class="phuongson">
+            <div class="ps">
+                <img src="/image/ps.jpg" alt="">
+                <div class="pson">
+                    <p class="phs">Công khai thực hiện dự toán thu chi ngân sách quý 1,2,2 năm 2024</p>
+                    <div class="phso">
+                        <span class="date">11.11.2024</span>
+                        <span class="views">239</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ps">
+                <img src="/image/ps1.jpg" alt="">
+                <div class="pson">
+                    <p class="phs">Công khai điều kiện bảo đảm chất lượng hoạt động giáo dục phổ thông; kế hoạch và kết
+                        quả hoạt
+                        động giáo dục phổ thông năm học 2024-2025</p>
+                    <div class="phso">
+                        <span class="date">08.11.2024</span>
+                        <span class="views">301</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ps">
+                <img src="/image/ps2.jpg" alt="">
+                <div class="pson">
+                    <p class="phs">Công khai thông tin về cơ sở giáo dục và thu chi tài chính năm 2024</p>
+                    <div class="phso">
+                        <span class="date">05.11.2024</span>
+                        <span class="views">1269</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ps">
+                <img src="/image/ps4.jpg" alt="">
+                <div class="pson">
+                    <p class="phs">Trung tâm DVVL tỉnh Bắc Giang phối hợp với trường THPT Phương Sơn tổ chức “Phiên giao
+                        dịch việc
+                        làm lưu động” dành cho người lao động thuộc vùng đồng bào dân tộc thiểu số và miền núi</p>
+                    <div class="phso">
+                        <span class="date">05.11.2024</span>
+                        <span class="views">687</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ps">
+                <img src="/image/ps1.jpg" alt="">
+                <div class="pson">
+                    <p class="phs">Trường THPT Phương Sơn tổ chức Hội nghị đối thoại với học sinh năm học 2024-2025</p>
+                    <div class="phso">
+                        <span class="date">03.11.2024</span>
+                        <span class="views">324</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cột 3  -->
+
+
+        <!-- <script>
+            fetch('./taskbar.ejs')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('Taskbar').innerHTML = data;
+                });
+        </script> -->
+        <!-- Phần Thông báo -->
+        <div class="thongbao">
+            <h2>Thông báo</h2>
+            <div class="thongbao-item">
+                <div class="date">
+                    <span>15</span>
+                    <span>11 - 2024</span>
+                </div>
+                <div class="info">
+                    <a href="#">THÔNG BÁO Tổ chức thi và cấp chứng chỉ tiếng Anh bậc 2, 3, 4, 5 theo khung năng lực
+                        ngoại
+                        ngữ...</a>
+                    <p class="meta">270 lượt xem</p>
+                </div>
+            </div>
+            <div class="thongbao-item">
+                <div class="date">
+                    <span>14</span>
+                    <span>11 - 2024</span>
+                </div>
+                <div class="info">
+                    <a href="#">Thông báo kết quả thi tiếng Anh ngày 09/11/2024 tại Trường THPT Phương Sơn </a>
+                    <p class="meta">1540 lượt xem</p>
+                </div>
+            </div>
+            <div class="thongbao-item">
+                <div class="date">
+                    <span>12</span>
+                    <span>11 - 2024</span>
+                </div>
+                <div class="info">
+                    <a href="#">Thông báo tuyển sinh các l
+                </div>
+                <div class="dangky">
+                    <div class="header">ĐĂNG KÝ TUYỂN SINH</div>
+                    <div class="nhom">
+                        <label for="name">Họ và tên:</label>
+                        <input type="text" id="name" placeholder="Nhập họ tên...">
+                    </div>
+                    <div class="nhom">
+                        <label for="gt">Giới tính:</label>
+                        <select id="gt">
+                            <option>Giới tính</option>
+                            <option>Nam</option>
+                            <option>Nữ</option>
+                            <option>Khác</option>
+                        </select>
+                    </div>
+                    <div class="nhom">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Nhập email...">
+                    </div>
+                    <div class="nhom">
+                        <label for="phone">Điện thoại:</label>
+                        <input type="tel" id="phone" placeholder="Nhập số điện thoại...">
+                    </div>
+                    <button class="submit">GỬI ĐĂNG KÝ</button>
+                </div>
+                <div class="footer">
+                    <p>Địa chỉ: Xã Phương Sơn, Huyện Lục Nam, Tỉnh Bắc Giang</p>
+                    <p>Điện thoại: 0204-xxxxxxx</p>
+                </div>
+                <script>
+                    // Lấy phần chứa hình ảnh và tất cả hình ảnh trong slider
+                    const slidesContainer = document.querySelector('.anh');
+                    const images = document.querySelectorAll('.anh img');
+                    let chimuc = 0;
+
+                    // Xử lý khi nhấn vào nút "tiếp theo"
+                    document.getElementById('next').addEventListener('click', () => {
+                        chimuc = (chimuc + 1) % images.length; // Tăng chỉ mục ảnh
+                        updateSlider(); // Cập nhật vị trí của slider
+                    });
+
+                    // Xử lý khi nhấn vào nút "quay lại"
+                    document.getElementById('prev').addEventListener('click', () => {
+                        chimuc = (chimuc - 1 + images.length) % images.length; // Giảm chỉ mục ảnh
+                        updateSlider(); // Cập nhật vị trí của slider
+                    });
+
+                    // Hàm cập nhật vị trí của slider
+                    function updateSlider() {
+                        slidesContainer.style.transform = `translateX(-${chimuc * 100}%)`;
+                    }
+                </script>
+</body>
+
+</html>

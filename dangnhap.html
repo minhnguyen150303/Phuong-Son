@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("https://i.pinimg.com/736x/1b/50/f0/1b50f05da175d0a6a0a9bebf1856953c.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        .l {
+            background-color: #87cefa;
+        }
+
+        .b {
+            background-color: white;
+            padding: 40px;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .c {
+            margin-bottom: 10px;
+            position: relative;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 15px;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            padding-left: 45px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3bafda;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-top: 10px;
+
+        }
+
+        button:hover {
+            background-color: #3091b5;
+        }
+
+        .cuoi {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .cuoi a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .cuoi a :hover {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="l">
+        <div class="b">
+            <h1> Đăng Nhập</h1>
+            <!-- form  -->
+            <form>
+                <div class="c">
+                    <label for="username">Tên đăng nhập:</label>
+                    <div class="m">
+                        <!-- id:định danh duy nhất
+                     placeholder: hiển thị gợi ý bên trong trường nhập dữ liệu  -->
+                        <input type="text" id="ten" placeholder="Tên đăng nhâp/Email">
+                    </div>
+                </div>
+                <div class="c">
+                    <label for="Password">Mật Khẩu</label>
+                    <div class="m">
+                        <input type="password" id="mk" placeholder="Mật khẩu">
+                    </div>
+                </div>
+                <button type="submit" id="sumbmit">Đăng Nhập</button>
+            </form>
+            <div class="cuoi">
+                <a href="#">Bạn quên tên đăng nhập hoặc mặt khẩu?</a><br>
+                <p><a href="#">Bạn chưa có tài khoản? Đăng ký ngay!</a></p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var button = document.getElementById('sumbmit');
+        button.onclick = function () {
+            alert('Chào mừng bạn đến với Trường THPT Phương Sơn!');
+        };
+    </script>
+</body>
+
+</html>

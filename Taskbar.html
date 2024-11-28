@@ -1,0 +1,484 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+
+        }
+
+        .phandau {
+            background-color: #e6e6e6;
+            padding: 5px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .phandau .modau {
+            color: #333;
+            font-size: 16px;
+        }
+
+        .phandau .nav {
+            display: flex;
+        }
+
+        .phandau .nav a {
+            color: #333;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .phandau .nav a:hover {
+            color: #d9534f;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .logo-c {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-c img {
+            height: 80px;
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .info h1 {
+            margin: 0;
+            color: #d9534f;
+            font-size: 25px;
+        }
+
+        .info p {
+            margin: 0;
+            color: #3572a8;
+            font-size: 20px;
+        }
+
+        .tra {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .tra input[type="text"] {
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .tra button {
+            background-color: #d9534f;
+            color: white;
+            padding: 6px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .trang {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background-color: #2871bb;
+            color: white;
+            margin-bottom: 10px
+        }
+
+        .trang a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 0.95em;
+            white-space: nowrap;
+        }
+
+        .trang a:hover {
+            border-bottom: 2px solid #ff0000;
+        }
+
+        .cap1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .cap2 {
+            display: none;
+            position: absolute;
+            background-color: #2871bb;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .cap2 a {
+            color: white;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .cap2 a:hover {
+            background-color: #ff0000;
+        }
+
+        .cap1:hover>.cap2 {
+            display: block;
+        }
+
+        .cap2 .cap1:hover .cap2 {
+            left: 100%;
+            top: 0;
+        }
+
+        /* Khung chứa slider */
+        /* .khung {
+            position: relative;
+            max-width: 1000px;
+            padding: 1px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 8px;
+        } */
+
+        /* Hiển thị hình ảnh liên tiếp theo hàng ngang */
+        /* .anh {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        } */
+
+        /* Định dạng kích thước hình ảnh trong slider */
+        /* .anh img {
+            width: 100%;
+            height: auto;
+        } */
+
+        /* Khu vực nút điều hướng trái/phải */
+        /* .nut {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        } */
+
+        /* Định dạng nút điều hướng */
+        /* .nut a {
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 24px;
+            transition: background-color 0.3s;
+        } */
+
+        /* Hiệu ứng hover cho nút điều hướng */
+        /* .nut a:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        } */
+        /* 
+        .noidung {
+            display: flex;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+
+        .tintuc,
+        .sidebar {
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tintuc {
+            width: 50%;
+            margin-right: 20px;
+        }
+
+        .sidebar {
+            width: 30%;
+        } */
+        /* 
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2a5b39;
+            margin-bottom: 20px;
+        }
+
+        .e {
+            margin-bottom: 20px;
+        }
+
+        .e img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .phuongson {
+            width: 300px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        } */
+
+        /* .ps {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .ps img {
+            width: 80px;
+            height: 60px;
+            border-radius: 5px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .pson {
+            flex: 1;
+        }
+
+        .phs {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin: 0 0 5px;
+        } */
+
+        /* .phso {
+            font-size: 12px;
+            color: #666;
+            display: flex;
+            align-items: center;
+        }
+
+        .phso .date {
+            display: flex;
+            align-items: center;
+        }
+
+        .phso .date::before {
+            content: "\1F4C5";
+            margin-right: 5px;
+        }
+
+        .phso .views::before {
+            content: "\1F441";
+            margin-right: 5px;
+            margin-left: 10px;
+        } */
+
+        /* Thông báo */
+        /* .thongbao {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        } */
+
+        /* .thongbao h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .thongbao-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .thongbao-item .date {
+            font-size: 20px;
+            color: #d9534f;
+            text-align: center;
+            min-width: 50px;
+        } */
+        /* 
+        .thongbao-item .date span {
+            display: block;
+            font-weight: bold;
+        }
+
+        .thongbao-item .info {
+            flex: 1;
+        }
+
+        .thongbao-item .info a {
+            font-size: 16px;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .thongbao-item .info a:hover {
+            color: #d9534f;
+        } */
+
+        /* .thongbao-item .meta {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .dangky {
+            width: 250px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .dangky .header {
+            background-color: #1e73be;
+            color: white;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px;
+            font-size: 16px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            position: relative;
+        } */
+
+        /* .dangky.header::before {
+            content: "►";
+            position: absolute;
+            left: 8px;
+            color: red;
+            font-size: 12px;
+        }
+
+        .dangky .nhom {
+            display: flex;
+            align-items: center;
+            padding: 8px 10px;
+        }
+
+        .dangky .nhom label {
+            width: 70px;
+            font-size: 14px;
+            color: #333;
+        } */
+
+        /* .dangky .nhom input,
+        .dangky .nhom select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 14px;
+            color: #666;
+        } */
+
+        /* .dangky .submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        } */
+
+        /* .dangky .submit:hover {
+            background-color: #c9302c;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <div class="logo-c">
+            <img src="chi.jpg" alt="Logo">
+            <div class="info">
+                <p><b>SỞ GIÁO DỤC VÀ ĐÀO TẠO TỈNH BẮC GIANG</b></p>
+                <h1>TRƯỜNG THPT PHƯƠNG SƠN</h1>
+            </div>
+        </div>
+        <div class="tra">
+            <input type="text" placeholder="Search...">
+            <button type="submit">🔍</button>
+        </div>
+    </div>
+    <div class="trang">
+        <a href="spcuoiki.html"><span class="icon">🏠</span> TRANG CHỦ</a>
+        <div class="cap1">
+            <a href="#"><span class="icon">📜</span> GIỚI THIỆU</a>
+            <div class="cap2">
+                <a href="Lichsu.html"><span class="icon">📅</span>LỊCH SỬ PHÁT TRIỂN </a>
+                <a href="chuongtrinh.html"><span class="icon">📘</span> CHƯƠNG TRÌNH ĐÀO TẠO </a>
+                <a href="thanhtich.html"><span class="icon">🏆</span>THÀNH TÍCH ĐẠT ĐƯỢC </a>
+                <div class="cap1">
+                    <a href="cocau.html"><span class="icon">🏢</span>CƠ CẤU TỔ CHỨC </a>
+                    <div class="cap2">
+                        <a href="#"><span class="icon">👩‍🏫</span>BAN GIÁM HIỆU </a>
+                        <a href="#"><span class="icon">👥</span>CÁN BỘ GIÁO VIÊN </a>
+                        <div class="cap1">
+                            <a href="#"><span class="icon">📚</span>Các Tổ Bộ Môn</a>
+                            <div class="cap2">
+                                <a href="#"><span class="icon">🧮</span>TỔ TOÁN </a>
+                                <a href="#"><span class="icon">🔬</span>TỔ LÝ </a>
+                                <a href="#"><span class="icon">⚗️</span>TỔ HÓA </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="tuyensinh.html"><span class="icon">🎓</span> TUYỂN SINH</a>
+        <a href="lienhe.html"><span class="icon">📞</span> LIÊN HỆ</a>
+        <a href="dangnhap.html"><span class="icon">🔐</span>ĐĂNG NHẬP </a>
+    </div>
+</body>
+
+</html>

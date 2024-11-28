@@ -1,0 +1,210 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+
+        }
+
+        .phandau {
+            background-color: #e6e6e6;
+            padding: 5px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .phandau .modau {
+            color: #333;
+            font-size: 16px;
+        }
+
+        .phandau .nav {
+            display: flex;
+        }
+
+        .phandau .nav a {
+            color: #333;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .phandau .nav a:hover {
+            color: #d9534f;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .logo-c {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-c img {
+            height: 80px;
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .info h1 {
+            margin: 0;
+            color: #d9534f;
+            font-size: 25px;
+        }
+
+        .info p {
+            margin: 0;
+            color: #3572a8;
+            font-size: 20px;
+        }
+
+        .tra {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .tra input[type="text"] {
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .tra button {
+            background-color: #d9534f;
+            color: white;
+            padding: 6px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .trang {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background-color: #2871bb;
+            color: white;
+            margin-bottom: 10px
+        }
+
+        .trang a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 0.95em;
+            white-space: nowrap;
+        }
+
+        .trang a:hover {
+            border-bottom: 2px solid #ff0000;
+        }
+
+        .cap1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .cap2 {
+            display: none;
+            position: absolute;
+            background-color: #2871bb;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .cap2 a {
+            color: white;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .cap2 a:hover {
+            background-color: #ff0000;
+        }
+
+        .cap1:hover>.cap2 {
+            display: block;
+        }
+
+        .cap2 .cap1:hover .cap2 {
+            left: 100%;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <div class="logo-c">
+            <img src="/image/chi.jpg" alt="Logo">
+            <div class="info">
+                <p><b>SỞ GIÁO DỤC VÀ ĐÀO TẠO TỈNH BẮC GIANG</b></p>
+                <h1>TRƯỜNG THPT PHƯƠNG SƠN</h1>
+            </div>
+        </div>
+        <div class="tra">
+            <input type="text" placeholder="Search...">
+            <button type="submit">🔍</button>
+        </div>
+    </div>
+    <div class="trang">
+        <a href="/"><span class="icon">🏠</span> TRANG CHỦ</a>
+        <div class="cap1">
+            <a href="#"><span class="icon">📜</span> GIỚI THIỆU</a>
+            <div class="cap2">
+                <a href="lichsu"><span class="icon">📅</span>LỊCH SỬ PHÁT TRIỂN </a>
+                <a href="chuongtrinh"><span class="icon">📘</span> CHƯƠNG TRÌNH ĐÀO TẠO </a>
+                <a href="thanhtich"><span class="icon">🏆</span>THÀNH TÍCH ĐẠT ĐƯỢC </a>
+                <div class="cap1">
+                    <a href="cocau"><span class="icon">🏢</span>CƠ CẤU TỔ CHỨC </a>
+                    <div class="cap2">
+                        <a href="#"><span class="icon">👩‍🏫</span>BAN GIÁM HIỆU </a>
+                        <a href="#"><span class="icon">👥</span>CÁN BỘ GIÁO VIÊN </a>
+                        <div class="cap1">
+                            <a href="#"><span class="icon">📚</span>Các Tổ Bộ Môn</a>
+                            <div class="cap2">
+                                <a href="#"><span class="icon">🧮</span>TỔ TOÁN </a>
+                                <a href="#"><span class="icon">🔬</span>TỔ LÝ </a>
+                                <a href="#"><span class="icon">⚗️</span>TỔ HÓA </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="tuyensinh"><span class="icon">🎓</span> TUYỂN SINH</a>
+        <a href="lienhe"><span class="icon">📞</span> LIÊN HỆ</a>
+        <a href="login"><span class="icon">🔐</span>ĐĂNG NHẬP </a>
+    </div>
+</body>
+
+</html>

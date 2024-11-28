@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cơ cấu tổ chức</title>
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .nen {
+            background-color: rgb(209, 194, 167);
+            color: white;
+            text-align: center;
+            margin: 10px;
+            padding: 50px 20px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhwoWqQ2cA94AqGdl3sumVoK3EM6eByvvyyw&s');
+            /* Hình trống đồng */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-blend-mode: color-burn;
+            position: relative;
+            height: 150px;
+        }
+
+        .mau {
+            position: absolute;
+            /* Đặt vị trí tương đối so với banner */
+            bottom: 0px;
+            /* Cách đáy banner */
+            left: 20px;
+            /* Cách trái banner 20px */
+        }
+
+        .mau h1 {
+            font-size: 36px;
+            margin: 0;
+            color: #0000BB;
+            background-color: rgba(255, 255, 255, 0.527);
+            /* Nền trắng mờ */
+            display: inline-block;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        .mau .ovuong {
+            width: 40px;
+            height: 3px;
+            background-color: red;
+            /* Màu đỏ */
+            margin-bottom: -20px;
+            margin-left: 30px;
+            position: relative;
+        }
+
+        .ô {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            /* Màu đỏ */
+            position: absolute;
+            top: -50px;
+            right: -10px;
+        }
+
+        .sơ {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0044cc;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            background: #eaf7ff;
+            color: #333;
+            padding: 12px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        ul li:hover {
+            background: #d1ecf9;
+            transform: translateY(-2px);
+        }
+
+        ul li::before {
+            content: "•";
+            color: #0044cc;
+            font-size: 20px;
+        }
+
+        .do {
+            width: 40%;
+            margin-top: 10px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 30px;
+            background: #eaf7ff;
+            display: inline-block;
+            position: relative;
+        }
+
+        .header {
+            background: #4caf50;
+            color: white;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .box {
+            background: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            color: #d80000;
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #f9f9f9;
+            padding: 20px 50px;
+            text-align: center;
+            border-top: 2px solid #000080;
+            /* Đường viền màu xanh navy */
+        }
+
+        .td {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            /* Khoảng cách giữa phần "Liên hệ" và các mạng xã hội */
+            flex-wrap: wrap;
+            /* Để đảm bảo bố cục không bị vỡ trên màn hình nhỏ */
+        }
+
+        .bieutuong {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            /* Khoảng cách giữa các biểu tượng */
+        }
+
+        .bieutuong a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #0066ff;
+            display: flex;
+            /* Để căn giữa biểu tượng và chữ */
+            align-items: center;
+            gap: 20px;
+            /* Khoảng cách giữa biểu tượng và chữ */
+        }
+
+        .bieutuong img {
+            width: 25px;
+            height: 25px;
+            object-fit: cover;
+        }
+
+        .bieutuong a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class id="Taskbar"></div>
+    <script>
+        fetch('Taskbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('Taskbar').innerHTML = data;
+            });
+    </script>
+
+    <section class="nen">
+        <div class="mau">
+            <div class="ovuong"></div>
+            <h1>Cơ cấu tổ chức</h1>
+            <div class="ô"></div>
+        </div>
+    </section>
+    <div class="sơ">
+        <h2>CƠ CẤU TỔ CHỨC TRƯỜNG THPT PHƯƠNG SƠN</h2>
+        <ul>
+            <li>Sơ đồ tổ chức</li>
+            <div class="do">
+                <div class="header">BAN GIÁM HIỆU</div>
+                <div class="section">
+                    <div class="box">TỔ CHỨC CĐ</div>
+                    <div class="box">ĐOÀN TN</div>
+                    <div class="box">CÁC TỔ CM</div>
+                </div>
+            </div>
+            <li>Chi bộ Đảng</li>
+            <li>Ban Giám hiệu</li>
+            <li>Tổ chức Công Đoàn</li>
+            <li>Tổ chức Đoàn TN</li>
+            <li>Các Tổ chuyên môn</li>
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="td">
+            <h3>Liên hệ với Trường THPT Phương Sơn</h3>
+            <div class="bieutuong">
+                <a href="#"><img src="face.jpg" alt="Facebook"> Facebook</a>
+                <a href="#"><img src="OIP.jpg" alt="Gmail"> Gmail</a>
+                <a href="#"><img src="tw.jpg" alt="Twitter"> Twitter</a>
+                <a href="#"><img src="in.jpg" alt="LinkedIn"> LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

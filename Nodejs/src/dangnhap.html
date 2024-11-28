@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1">
+    <title>Login</title>
+    <!-- Include FontAwesome link to display icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .login {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #4a4a4a;
+        }
+
+        .login form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .login label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+            border-radius: 5px 0 0 5px;
+            padding: 10px;
+            width: 40px;
+        }
+
+        .login input[type="text"],
+        .login input[type="password"] {
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            flex: 1;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .login input[type="text"]:focus,
+        .login input[type="password"]:focus {
+            background: #eaf3ff;
+            box-shadow: 0 0 5px rgba(81, 203, 238, 0.5);
+        }
+
+        .login input[type="submit"] {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .login input[type="submit"]:hover {
+            background: linear-gradient(135deg, #5a7de1, #956dcd);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .login input[type="text"],
+        .login input[type="password"],
+        .login input[type="submit"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .login i {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <h1>Login</h1>
+        <form action="/auth" method="post">
+            <label for="username">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="email" placeholder="Username" id="email" required>
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+
+</html>
