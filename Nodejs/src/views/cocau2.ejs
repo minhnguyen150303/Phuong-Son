@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thành Tích Đạt Được</title>
+    <title>Cơ cấu tổ chức</title>
     <style>
         body {
 
             font-family: Arial, sans-serif;
-            margin: 0px;
-            padding: 0px;
+            margin: 0;
+            padding: 20px;
         }
 
         .nen {
             background-color: rgb(209, 194, 167);
             color: white;
             text-align: center;
-            margin-top: 10px;
-            padding: 20px;
-            background-image: url('https://toigingiuvedep.vn/wp-content/uploads/2021/08/anh-xa-truong-dep-nhat.jpg');
+            margin: 10px;
+            padding: 50px 20px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhwoWqQ2cA94AqGdl3sumVoK3EM6eByvvyyw&s');
             /* Hình trống đồng */
             background-size: cover;
             background-repeat: no-repeat;
@@ -47,7 +47,6 @@
             display: inline-block;
             padding: 30px;
             border-radius: 5px;
-
         }
 
         .mau .ovuong {
@@ -58,7 +57,6 @@
             margin-bottom: -20px;
             margin-left: 30px;
             position: relative;
-            display: block
         }
 
         .ô {
@@ -71,58 +69,88 @@
             right: -10px;
         }
 
-        .bc {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            padding: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .cot {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
+        .sơ {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
             border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .cot:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        h2 {
+            color: #0044cc;
+            font-size: 22px;
+            margin-bottom: 20px;
         }
 
-        .cot img {
-            width: 100%;
-            height: auto;
-            border-bottom: 1px solid #ddd;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
         }
 
-        .cot h3 {
-            font-size: 18px;
+        ul li {
+            background: #eaf7ff;
+            color: #333;
+            padding: 12px 20px;
             margin: 10px 0;
-            padding: 0 10px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .cot p {
-            font-size: 14px;
-            color: #555;
-            padding: 0 10px 20px;
+        ul li:hover {
+            background: #d1ecf9;
+            transform: translateY(-2px);
         }
 
-        /* Đảm bảo bố cục đẹp trên màn hình nhỏ */
-        @media (max-width: 768px) {
-            .bc {
-                grid-template-columns: 1fr;
-            }
+        ul li::before {
+            content: "•";
+            color: #0044cc;
+            font-size: 20px;
         }
 
-        @media (max-width: 768px) {
-            .bc {
-                grid-template-columns: 1fr;
-            }
+        .do {
+            width: 40%;
+            margin-top: 10px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 30px;
+            background: #eaf7ff;
+            display: inline-block;
+            position: relative;
+        }
+
+        .header {
+            background: #4caf50;
+            color: white;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .box {
+            background: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            color: #d80000;
+            font-weight: bold;
         }
 
         .footer {
@@ -170,74 +198,40 @@
         .bieutuong a:hover {
             text-decoration: underline;
         }
-
-        .cot .btn-chitiet {
-            display: inline-block;
-            background-color: #0066ff;
-            /* Màu nền xanh */
-            color: white;
-            /* Màu chữ trắng */
-            padding: 10px 20px;
-            /* Khoảng cách trong nút */
-            text-decoration: none;
-            /* Loại bỏ gạch chân */
-            border-radius: 5px;
-            /* Bo góc nút */
-            margin-top: 10px;
-            /* Khoảng cách phía trên */
-            font-weight: bold;
-            /* Đậm chữ */
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            /* Hiệu ứng chuyển màu nền và dịch chuyển */
-        }
-
-        .cot .btn-chitiet:hover {
-            background-color: #004bb5;
-            /* Màu nền khi hover */
-            transform: translateY(-3px);
-            /* Hiệu ứng dịch chuyển nhẹ khi hover */
-        }
-
-        .cot .btn-chitiet:active {
-            background-color: #00397f;
-            /* Màu nền khi nhấn */
-            transform: translateY(1px);
-            /* Dịch chuyển nhẹ khi nhấn */
-        }
     </style>
 </head>
 
 <body>
     <div class id="Taskbar">
-        <%- include('./taskbar') %>
+        <%- include('./taskbar2') %>
     </div>
 
     <section class="nen">
         <div class="mau">
             <div class="ovuong"></div>
-            <h1>Thành Tích </h1>
+            <h1>Cơ cấu tổ chức</h1>
             <div class="ô"></div>
         </div>
     </section>
-
-    <div class="bc">
-        <% dataTable.forEach(post=> { %>
-            <% if (post.type==3) { %>
-                <div class="cot">
-                    <img src="/image/thanhtich1.jpg" alt="">
-                    <h3>
-                        <%= post.title %>
-                    </h3>
-                    <p>
-                        <%= post.author %>
-                    </p>
-                    <a class="btn-chitiet" href="/get-chitiet?id=<%= post.id %>">Chi tiết</a>
+    <div class="sơ">
+        <h2>CƠ CẤU TỔ CHỨC TRƯỜNG THPT PHƯƠNG SƠN</h2>
+        <ul>
+            <li>Sơ đồ tổ chức</li>
+            <div class="do">
+                <div class="header">BAN GIÁM HIỆU</div>
+                <div class="section">
+                    <div class="box">TỔ CHỨC CĐ</div>
+                    <div class="box">ĐOÀN TN</div>
+                    <div class="box">CÁC TỔ CM</div>
                 </div>
-                <% } %>
-                    <% }); %>
+            </div>
+            <li>Chi bộ Đảng</li>
+            <li>Ban Giám hiệu</li>
+            <li>Tổ chức Công Đoàn</li>
+            <li>Tổ chức Đoàn TN</li>
+            <li>Các Tổ chuyên môn</li>
+        </ul>
     </div>
-
-
     <div class="footer">
         <div class="td">
             <h3>Liên hệ với Trường THPT Phương Sơn</h3>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sử - Trường THPT Phương Sơn</title>
+    <style>
+        body {
+
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .nen {
+            background-color: rgb(209, 194, 167);
+            color: white;
+            text-align: center;
+            margin-top: 0;
+            padding: 20px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhwoWqQ2cA94AqGdl3sumVoK3EM6eByvvyyw&s');
+            /* Hình trống đồng */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-blend-mode: color-burn;
+            position: relative;
+            height: 150px;
+        }
+
+        .mau {
+            position: absolute;
+            /* Đặt vị trí tương đối so với banner */
+            bottom: 0px;
+            /* Cách đáy banner */
+            left: 20px;
+            /* Cách trái banner 20px */
+        }
+
+        .mau h1 {
+            font-size: 36px;
+            margin: 0;
+            color: #0000BB;
+            background-color: rgba(255, 255, 255, 0.527);
+            /* Nền trắng mờ */
+            display: inline-block;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        .mau .ovuong {
+            width: 40px;
+            height: 3px;
+            background-color: red;
+            /* Màu đỏ */
+            margin-bottom: -20px;
+            margin-left: 30px;
+            position: relative;
+        }
+
+        .ô {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            /* Màu đỏ */
+            position: absolute;
+            top: -50px;
+            right: -10px;
+        }
+
+        .noidung {
+            margin: 2%;
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.6;
+            /* Giữ khoảng cách giữa các dòng */
+            max-width: 1200px;
+            /* Giới hạn chiều rộng nội dung */
+            margin: auto;
+            /* Canh giữa nội dung */
+        }
+
+        .td {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .footer {
+            background-color: #f9f9f9;
+            padding: 20px 50px;
+            text-align: center;
+            border-top: 2px solid #000080;
+            /* Đường viền màu xanh navy */
+        }
+
+        .td {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            /* Khoảng cách giữa phần "Liên hệ" và các mạng xã hội */
+            flex-wrap: wrap;
+            /* Để đảm bảo bố cục không bị vỡ trên màn hình nhỏ */
+        }
+
+        .bieutuong {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            /* Khoảng cách giữa các biểu tượng */
+        }
+
+        .bieutuong a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #0066ff;
+            display: flex;
+            /* Để căn giữa biểu tượng và chữ */
+            align-items: center;
+            gap: 20px;
+            /* Khoảng cách giữa biểu tượng và chữ */
+        }
+
+        .bieutuong img {
+            width: 25px;
+            height: 25px;
+            object-fit: cover;
+        }
+
+        .bieutuong a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .mau h1 {
+                font-size: 24px;
+                padding: 10px;
+            }
+
+            .noidung {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .td {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class id="Taskbar">
+        <%- include('./taskbar2') %>
+    </div>
+
+    <section class="nen">
+        <div class="mau">
+            <div class="ovuong"></div>
+            <h1>Lịch sử hình thành và Phát triển</h1>
+            <div class="ô"></div>
+        </div>
+    </section>
+
+
+    <!-- nôi dung  -->
+    <div class="noidung">
+        <h3 class="td">TRƯỜNG THPT PHƯƠNG SƠN HƠN 20 NĂM XÂY DỰNG VÀ PHÁT TRIỂN</h3>
+        <div> Trường THPT Phương Sơn là một trong bốn trường công lập đóng trên trên địa bàn huyện Lục Nam, tỉnh Bắc
+            Giang. Tuy là một trong những trường thành lập sau nhưng nhà trường đã ghi được dấu ấn và có đóng góp đáng
+            kể vào sự nghiệp giáo dục chung của huyện, của tỉnh nhà. Sau hơn 20 năm xây dựng và phát triển, với sự phấn
+            đấu nỗ lực không ngừng của các thế hệ nhà giáo và các em học sinh, trường THPT Phương Sơn đã đạt được những
+            thành tích đáng ghi nhận, viết nên trang sử truyền thống vẻ vang rất đáng tự hào.</div>
+        <img src="/image/a1.png">
+        <p>Trường THPT Phương Sơn được thành lập vào <strong> ngày 22 tháng 7 năm 1999</strong>, theo Quyết định số
+            47/QĐ-UBND của UBND tỉnh Bắc Giang. Trong những ngày đầu thành lập, nhà trường gặp rất nhiều khó khăn. Năm
+            học 1999-2000 là năm học đầu tiên của nhà trường với quy mô 06 lớp, 09 cán bộ, giáo viên, 312 học sinh . Do
+            chưa có đủ điều kiện về cơ sở vật chất nên học sinh nhà trường phải đi học nhờ tại Trường Tiểu học Phương
+            Sơn, chi bộ nhà trường phải sinh hoạt ghép với chi bộ Trung tâm Giáo dục Thường xuyên – Dạy nghề Lục Nam.
+            Tuy thiếu thốn về cơ sở vật chất, về đội ngũ nhưng thầy và trò nhà trường đã chung sức, chung lòng vượt mọi
+            gian nan hoàn thành xuất sắc nhiệm vụ. Năm học 2000-2001, nhà trường chuyển ra địa điểm mới nhưng hoạt động
+            của nhà trường vẫn gặp không ít những khó khăn, cơ sở vật chất còn đang trong quá trình xây dựng nên việc tổ
+            chức hoạt động dạy và học của giáo viên, học sinh nhà trường rất vất vả. Khi quy mô trường lớp ngày càng mở
+            rộng, những phòng học cấp 4 không đủ để học tập, nhà trường phải cải tạo cả các nhà xe để có đủ phòng học
+            cho học sinh. Cứ như thế, thầy và trò nhà trường đã từng bước vượt qua những khó khăn. </p>
+        <p><strong>Giai đoạn 1999-2003</strong>, do thầy Đào Văn Mộc làm Hiệu trưởng: Đây là giai đoạn nhà trường trong
+            những ngày đầu xây dựng và phát triển, là giai đoạn có nhiều khó khăn nhất.</p>
+        <p><strong>Giai đoạn 2003-2009</strong>, do thầy Tăng Văn Nái làm Hiệu trưởng: Nhà trường từng bước đi vào ổn
+            định, cơ sở vật chất được tăng cường, những ngôi nhà 3 tầng kiên cố đã được xây dựng, quy mô trường lớp tăng
+            lên đáng kể (năm học 2004-2005: số lớp 34, số CBGV: 48, số HS 1685; năm học 2009-2010: số lớp 40, số CBGV:
+            79, số HS: 1872).</p>
+        <p><strong>Giai đoạn 2009-2013</strong>, do thầy Trần Duy Phương làm Hiệu trưởng: Hoạt động dạy và học của nhà
+            trường tiếp tục được duy trì và đi vào chiều sâu, đạt được những thành tích nổi bật: Ủy ban Nhân dân tỉnh
+            Bắc Giang tặng Cờ thi đua năm học 2020-2011, Bộ Giáo dục và Đào tạo tặng Bằng khen năm học 2011-2012.</p>
+        <p>Năm 2013, thầy Trần Duy Phương chuyển công tác về Sở GD-ĐT Bắc Giang, thầy Đặng Xuân Cát được luân chuyển về
+            làm Hiệu trưởng giai đoạn 2013-2018. Trong giai đoạn này, hoạt động dạy và học của nhà trường tiếp tục gặt
+            hái được nhiều thành công. Những kết quả đạt được nổi bật của nhà trường là:Cờ thi đua của Ủy ban Nhân dân
+            tỉnh Bắc Giang năm học 2016-2017; Trường đạt Chuẩn Quốc gia năm 2015, đặc biệt là nhà trường đã vinh dự được
+            tặng Bằng khen của Thủ tướng Chính phủ vì đã có thành tích trong công tác giáo dục và đào tạo từ năm
+            2011-2012 đến năm học 2015-2016, góp phần vào sự nghiệp xây dựng chủ nghĩa xã hội và bảo vệ Tổ quốc.</p>
+        <p>Năm 2018, thầy Đặng Xuân Cát nghỉ chế độ, thầy Phạm Hùng được bổ nhiệm làm Hiệu trưởng, nhà trường tiếp tục
+            thực hiện đổi mới hoạt động giáo dục theo Nghị quyết số 29-NQ/TW ngày 4/11/2013 Hội nghị Trung ương 8 khóa
+            XI về đổi mới căn bản, toàn diện Giáo dục và Đào tạo.</p>
+        <p>Từ khi thành lập đến nay, với sự nỗ lực bền bỉ của các thế hệ nhà giáo và học sinh, nhà trường đã đạt được
+            nhiều thành tích đáng khích lệ. Kết quả thi học sinh giỏi cấp tỉnh nhiều năm đứng trong top 10 của tỉnh, tỉ
+            lệ đỗ đại học không ngừng tăng lên, số lượng học sinh đạt điểm cao trong các kỳ thi đại học tăng cao so với
+            năm học trước (năm học 2009-2010 tỉ lệ học sinh đỗ đại học, cao đẳng: 25,5%; năm học 2013-2014: 51,4%).</p>
+        <p>Hiện nay, cơ sở vật chất của nhà trường được xây dựng theo hướng kiên cố hóa và hiện đại hóa, đạt Chuẩn Quốc
+            gia vào năm 2015 với đầy đủ các phòng học để nhiều năm nay nhà trường đã có thể học một ca; các phòng thí
+            nghiệm, thực hành, thư viện, nhà thi đấu đa năng, các phòng học thông minh…phục vụ có hiệu quả cho việc
+            nghiên cứu, giảng dạy của giáo viên và học tập của học sinh.</p>
+        <p>Cùng với sự phát triển về cơ sở vật chất, chất lượng đội ngũ nhà giáo cũng không ngừng được củng cố và nâng
+            cao. Hiện nay, 100% giáo viên của nhà trường đạt chuẩn, 13 giáo viên và cán bộ quản lí đạt trình độ trên
+            chuẩn. Trình độ chuyên môn nghiệp vụ của giáo viên cũng tăng lên với hơn 60% giáo viên đạt danh hiệu giáo
+            viên dạy giỏi cấp trường và cấp tỉnh, 100% cán bộ, giáo viên được xếp loại hoàn thành nhiệm vụ trở lên.</p>
+        <p>Song song với chất lượng đội ngũ là chất lượng giáo dục của nhà trường cũng không ngừng tăng lên, tỉ lệ học
+            sinh giỏi, học sinh tiên tiến đạt và vượt tỉ lệ của trường Chuẩn Quốc gia, tỉ lệ học sinh yếu giảm dần. Các
+            tổ chức đoàn thể, công tác xã hội hóa giáo dục đều phát triển mạnh mẽ. Tổ chức Công đoàn đã đạt được nhiều
+            thành tích nổi bật như: Cờ thi đua của Liên đoàn Lao động tỉnh Bắc Giang năm học 2016-2017; Bằng khen của
+            Tổng Liên đoàn Lao động Việt Nam năm học 2015-2016; Cờ thi đua của Tổng Liên đoàn Lao động Việt Nam năm học
+            2017-2018. Tổ chức Đoàn Thanh niên có nhiều hoạt động đổi mới và được đánh giá là một trong những đơn vị
+            tiêu biểu trong toàn tỉnh, đã nhiều lần được tặng Bằng khen của Trung ương Đoàn Thanh niên Cộng sản Hồ Chí
+            Minh.</p>
+        <p>Trong các năm qua, các thế hệ nhà giáo, cán bộ nhân viên của nhà trường đã tận tâm, tận lực vì học sinh thân
+            yêu, gắn bó với sự nghiệp giáo dục. Các thầy, cô giáo luôn sống giản dị, mẫu mực, có tác phong sư phạm, có
+            trình độ chuyên môn vững vàng, có phương pháp dạy phù hợp, luôn cần cù sáng tạo trong lao động dạy học, được
+            học sinh tin yêu, nhân dân tin tưởng. Đến nay, đã có nhiều thầy cô trở thành giáo viên giỏi cấp trường, cấp
+            tỉnh, được công nhận Chiến sĩ thi đua cơ sở, được tặng giấy khen, bằng khen của các cấp, tạo được niềm tin,
+            niềm tự hào của nhiều thế hệ học trò.</p>
+        <p>Làm nên truyền thống vẻ vang của nhà trường, còn phải kể tới đóng góp của các thế hệ học sinh. Các em luôn
+            chăm ngoan, hiếu học, kiên trì vượt khó, tích cực sáng tạo, quyết tâm phấn đấu đạt được những hoài bão cao
+            đẹp. Từ mái trường THPT Phương Sơn, biết bao học sinh đã nuôi dưỡng ước mơ và trưởng thành, đi tới mọi miền
+            Tổ quốc, đóng góp cho sự phát triển của quê hương, đất nước. Hàng trăm học sinh của nhà trường đã thành đạt
+            trong các lĩnh vực khác nhau – là sĩ quan trong Quân đội nhân dân, Công an nhân dân, kỹ sư, bác sĩ, doanh
+            nhân, công nhân giỏi, giáo viên, làm công chức trong các cơ quan của Đảng và Nhà nước …Các thế hệ học sinh
+            luôn hướng về mái trường mến yêu và luôn phát huy, làm rạng danh truyền thống tốt đẹp của nhà trường.</p>
+        <p>Trải qua chặng đường hơn 20 năm xây dựng và phát triển, được sự quan tâm chỉ đạo của các cấp ủy Đảng, chính
+            quyền, địa phương, các ban ngành cùng với sự phấn đầu nỗ lực của thầy và trò, trường THPT Phương Sơn đã
+            khẳng định vị thế của mình trong ngành Giáo dục và Đào tạo của huyện Lục Nam, của tỉnh Bắc Giang . Tập thể
+            cán bộ, giáo viên, nhân viên và học sinh toàn trường sẽ quyết tâm giữ vững và phát huy những thành tích đã
+            đạt được, xây dựng nhà trường ngày càng lớn mạnh.</p>
+    </div>
+    <div class="footer">
+        <div class="td">
+            <h3>Liên hệ với Trường THPT Phương Sơn</h3>
+            <div class="bieutuong">
+                <a href="#"><img src="/image/face.jpg" alt="Facebook"> Facebook</a>
+                <a href="#"><img src="/image/OIP.jpg" alt="Gmail"> Gmail</a>
+                <a href="#"><img src="/image/tw.jpg" alt="Twitter"> Twitter</a>
+                <a href="#"><img src="/image/in.jpg" alt="LinkedIn"> LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

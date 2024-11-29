@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.TEXT
       },
       adminId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       type: {
         type: Sequelize.STRING

@@ -473,7 +473,7 @@
     </div>
 
     <div class id="Taskbar">
-        <%- include('./taskbar') %>
+        <%- include('./taskbar2') %>
     </div>
 
     <div class="khung">
@@ -532,7 +532,6 @@
             </div>
         </div>
         <!-- cột 3  -->
-
 
 
         <!-- Phần Thông báo -->
@@ -597,29 +596,30 @@
                     <p>Địa chỉ: Xã Phương Sơn, Huyện Lục Nam, Tỉnh Bắc Giang</p>
                     <p>Điện thoại: 0204-xxxxxxx</p>
                 </div>
-                <script>
-                    // Lấy phần chứa hình ảnh và tất cả hình ảnh trong slider
-                    const slidesContainer = document.querySelector('.anh');
-                    const images = document.querySelectorAll('.anh img');
-                    let chimuc = 0;
+            </div>
+            <script>
+                // Lấy phần chứa hình ảnh và tất cả hình ảnh trong slider
+                const slidesContainer = document.querySelector('.anh');
+                const images = document.querySelectorAll('.anh img');
+                let chimuc = 0;
 
-                    // Xử lý khi nhấn vào nút "tiếp theo"
-                    document.getElementById('next').addEventListener('click', () => {
-                        chimuc = (chimuc + 1) % images.length; // Tăng chỉ mục ảnh
-                        updateSlider(); // Cập nhật vị trí của slider
-                    });
+                // Xử lý khi nhấn vào nút "tiếp theo"
+                document.getElementById('next').addEventListener('click', () => {
+                    chimuc = (chimuc + 1) % images.length; // Tăng chỉ mục ảnh
+                    updateSlider(); // Cập nhật vị trí của slider
+                });
 
-                    // Xử lý khi nhấn vào nút "quay lại"
-                    document.getElementById('prev').addEventListener('click', () => {
-                        chimuc = (chimuc - 1 + images.length) % images.length; // Giảm chỉ mục ảnh
-                        updateSlider(); // Cập nhật vị trí của slider
-                    });
+                // Xử lý khi nhấn vào nút "quay lại"
+                document.getElementById('prev').addEventListener('click', () => {
+                    chimuc = (chimuc - 1 + images.length) % images.length; // Giảm chỉ mục ảnh
+                    updateSlider(); // Cập nhật vị trí của slider
+                });
 
-                    // Hàm cập nhật vị trí của slider
-                    function updateSlider() {
-                        slidesContainer.style.transform = `translateX(-${chimuc * 100}%)`;
-                    }
-                </script>
+                // Hàm cập nhật vị trí của slider
+                function updateSlider() {
+                    slidesContainer.style.transform = `translateX(-${chimuc * 100}%)`;
+                }
+            </script>
 </body>
 
 </html>

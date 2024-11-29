@@ -4,7 +4,6 @@ import viewEngine from "./config/viewEngine";
 import initWebRoutes from './route/web';
 import connectDB from '../src/config/connectDB';
 import path from "path";
-import initAPIRoute from './route/API';
 import mysql from 'mysql2';
 require('dotenv').config();
 
@@ -13,6 +12,15 @@ let app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
+import session from 'express-session';
+
+// Cấu hình express-session
+app.use(session({
+    secret: 'your-secret-key',  // Chìa khóa bảo mật cho session
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }  // Nếu bạn sử dụng HTTPS, set secure: true
+}));
 
 
 viewEngine(app);
@@ -20,14 +28,13 @@ initWebRoutes(app);
 connectDB();
 
 let port = process.env.PORT || 8080;  //Port === undefined => Port = 6060
-initAPIRoute(app);
+
 
 
 
 
 
 // const mysql = require('mysql');
-const session = require('express-session');
 
 // const connection = mysql.createConnection({
 //     host: 'localhost',
@@ -53,13 +60,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'static')));
 
-// http://localhost:3000/
+
 app.get('/login', function (request, response) {
     // Render login template
     response.sendFile(path.join(__dirname + '/dangnhap.html'));
 });
 
-// http://localhost:3000/auth
+
 app.post('/auth', function (request, response) {
     const email = request.body.email;
     const password = request.body.password;
@@ -70,6 +77,7 @@ app.post('/auth', function (request, response) {
 
             if (results.length > 0) {
                 const hashedPassword = results[0].password;
+                const userId = results[0].id; // Lấy id của người dùng từ kết quả truy vấn
 
                 // So sánh mật khẩu
                 bcrypt.compare(password, hashedPassword, (err, isMatch) => {
@@ -78,9 +86,13 @@ app.post('/auth', function (request, response) {
                     if (isMatch) {
                         request.session.loggedin = true;
                         request.session.email = email;
-                        response.redirect('/get-crud');
+                        request.session.userId = userId; // Lưu ID người dùng vào session
+
+                        // Chuyển hướng tới trang có ID người dùng
+                        response.redirect(`/get-crud?id=${userId}`);
                     } else {
-                        response.send('Incorrect password!');
+                        return res.redirect('/login');
+
                     }
                 });
             } else {
@@ -91,6 +103,7 @@ app.post('/auth', function (request, response) {
         response.send('Please enter email and password!');
     }
 });
+
 
 
 

@@ -177,15 +177,15 @@
         </div>
     </div>
     <div class="trang">
-        <a href="/"><span class="icon">🏠</span> TRANG CHỦ</a>
+        <a href="?id=<%= userId %>"><span class="icon">🏠</span> TRANG CHỦ</a>
         <div class="cap1">
             <a href="#"><span class="icon">📜</span> GIỚI THIỆU</a>
             <div class="cap2">
-                <a href="lichsu"><span class="icon">📅</span>LỊCH SỬ PHÁT TRIỂN </a>
-                <a href="test"><span class="icon">📘</span> CHƯƠNG TRÌNH ĐÀO TẠO </a>
-                <a href="thanhtich"><span class="icon">🏆</span>THÀNH TÍCH ĐẠT ĐƯỢC </a>
+                <a href="lichsu2?id=<%= userId %>"><span class="icon">📅</span>LỊCH SỬ PHÁT TRIỂN </a>
+                <a href="test2?id=<%= userId %>"><span class="icon">📘</span> CHƯƠNG TRÌNH ĐÀO TẠO </a>
+                <a href="thanhtich2?id=<%= userId %>"><span class="icon">🏆</span>THÀNH TÍCH ĐẠT ĐƯỢC </a>
                 <div class="cap1">
-                    <a href="cocau"><span class="icon">🏢</span>CƠ CẤU TỔ CHỨC </a>
+                    <a href="cocau2?id=<%= userId %>"><span class="icon">🏢</span>CƠ CẤU TỔ CHỨC </a>
                     <div class="cap2">
                         <a href="#"><span class="icon">👩‍🏫</span>BAN GIÁM HIỆU </a>
                         <a href="#"><span class="icon">👥</span>CÁN BỘ GIÁO VIÊN </a>
@@ -201,9 +201,10 @@
                 </div>
             </div>
         </div>
-        <a href="tuyensinh"><span class="icon">🎓</span> TUYỂN SINH</a>
-        <a href="lienhe"><span class="icon">📞</span> LIÊN HỆ</a>
-        <a href="login"><span class="icon">🔐</span>ĐĂNG NHẬP </a>
+        <a href="tuyensinh2?id=<%= userId %>"><span class="icon">🎓</span> TUYỂN SINH</a>
+        <a href="lienhe2?id=<%= userId %>"><span class="icon">📞</span> LIÊN HỆ</a>
+        <a href="/"><span class="icon">🔐</span>ĐĂNG XUẤT </a>
+        <a href="get-crud?id=<%= userId %>"><span class="icon">🔐</span>QUẢN LÝ </a>
     </div>
 </body>
 

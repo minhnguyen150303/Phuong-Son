@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thành Tích Đạt Được</title>
+    <title>Chương trình đào tạo</title>
     <style>
         body {
 
@@ -19,7 +19,7 @@
             text-align: center;
             margin-top: 10px;
             padding: 20px;
-            background-image: url('https://toigingiuvedep.vn/wp-content/uploads/2021/08/anh-xa-truong-dep-nhat.jpg');
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhwoWqQ2cA94AqGdl3sumVoK3EM6eByvvyyw&s');
             /* Hình trống đồng */
             background-size: cover;
             background-repeat: no-repeat;
@@ -47,7 +47,6 @@
             display: inline-block;
             padding: 30px;
             border-radius: 5px;
-
         }
 
         .mau .ovuong {
@@ -58,7 +57,6 @@
             margin-bottom: -20px;
             margin-left: 30px;
             position: relative;
-            display: block
         }
 
         .ô {
@@ -73,9 +71,9 @@
 
         .bc {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            padding: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -83,21 +81,15 @@
         .cot {
             background-color: #f9f9f9;
             border: 1px solid #ddd;
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .cot:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
         .cot img {
             width: 100%;
             height: auto;
-            border-bottom: 1px solid #ddd;
         }
 
         .cot h3 {
@@ -113,12 +105,6 @@
         }
 
         /* Đảm bảo bố cục đẹp trên màn hình nhỏ */
-        @media (max-width: 768px) {
-            .bc {
-                grid-template-columns: 1fr;
-            }
-        }
-
         @media (max-width: 768px) {
             .bc {
                 grid-template-columns: 1fr;
@@ -171,38 +157,25 @@
             text-decoration: underline;
         }
 
-        .cot .btn-chitiet {
+        .btn-chitiet {
             display: inline-block;
-            background-color: #0066ff;
-            /* Màu nền xanh */
-            color: white;
-            /* Màu chữ trắng */
-            padding: 10px 20px;
-            /* Khoảng cách trong nút */
-            text-decoration: none;
-            /* Loại bỏ gạch chân */
-            border-radius: 5px;
-            /* Bo góc nút */
+            padding: 10px 15px;
             margin-top: 10px;
-            /* Khoảng cách phía trên */
-            font-weight: bold;
-            /* Đậm chữ */
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            /* Hiệu ứng chuyển màu nền và dịch chuyển */
+            font-size: 14px;
+            color: #fff;
+            background-color: #007bff;
+            /* Màu xanh */
+            text-decoration: none;
+            /* Xóa gạch chân */
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
         }
 
-        .cot .btn-chitiet:hover {
-            background-color: #004bb5;
-            /* Màu nền khi hover */
+        .btn-chitiet:hover {
+            background-color: #0056b3;
+            /* Màu xanh đậm hơn khi hover */
             transform: translateY(-3px);
-            /* Hiệu ứng dịch chuyển nhẹ khi hover */
-        }
-
-        .cot .btn-chitiet:active {
-            background-color: #00397f;
-            /* Màu nền khi nhấn */
-            transform: translateY(1px);
-            /* Dịch chuyển nhẹ khi nhấn */
+            /* Hiệu ứng nổi */
         }
     </style>
 </head>
@@ -215,16 +188,15 @@
     <section class="nen">
         <div class="mau">
             <div class="ovuong"></div>
-            <h1>Thành Tích </h1>
+            <h1>Chương trình đào tạo </h1>
             <div class="ô"></div>
         </div>
     </section>
-
     <div class="bc">
         <% dataTable.forEach(post=> { %>
-            <% if (post.type==3) { %>
+            <% if (post.type==2) { %>
                 <div class="cot">
-                    <img src="/image/thanhtich1.jpg" alt="">
+                    <img src="/image/tkb1.png" alt="Thời khóa biểu">
                     <h3>
                         <%= post.title %>
                     </h3>
@@ -236,8 +208,6 @@
                 <% } %>
                     <% }); %>
     </div>
-
-
     <div class="footer">
         <div class="td">
             <h3>Liên hệ với Trường THPT Phương Sơn</h3>
